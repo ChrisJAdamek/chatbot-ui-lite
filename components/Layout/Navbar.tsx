@@ -27,7 +27,7 @@ export const Navbar: FC = () => {
           href="https://code-scaffold.vercel.app"
         >
           // The text that appears for the link
-          Chatbot UI
+          gptCodooor
         </a>
       </div>
     </div>
