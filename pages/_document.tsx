@@ -6,18 +6,17 @@ export default function Document() {
   // When this component is used, it will return the following HTML structure
   return (
     // The Html component is a container for the entire HTML document
-    // Set the language attribute to "en" for English
     <Html lang="en">
-      // The Head component is used to add elements inside the HTML head section
-      // This is where you can add things like meta tags, styles, and scripts
+      {/* The Head component is used to add elements inside the HTML head section
+      This is where you can add things like meta tags, styles, and scripts */}
       <Head />
-      // The body element is a container for the content of the HTML document
+      {/* The body element is a container for the content of the HTML document */}
       <body>
-        // The Main component is a placeholder for the main content of your application
-        // Next.js will automatically render the content of the current page here
+        {/* The Main component is a placeholder for the main content of your application
+        Next.js will automatically render the content of the current page here */}
         <Main />
-        // The NextScript component is a placeholder for Next.js scripts
-        // These scripts enable features like client-side navigation and page preloading
+        {/* The NextScript component is a placeholder for Next.js scripts
+        These scripts enable features like client-side navigation and page preloading */}
         <NextScript />
       </body>
     </Html>
