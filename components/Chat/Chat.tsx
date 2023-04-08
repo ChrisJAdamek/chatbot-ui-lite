@@ -12,6 +12,7 @@ This Chat component could be used in various applications, such as a messaging a
 
 */
 
+// Import necessary components and types from other files
 import { Message } from "@/types";
 import { FC } from "react";
 import { ChatInput } from "./ChatInput";
@@ -19,6 +20,7 @@ import { ChatLoader } from "./ChatLoader";
 import { ChatMessage } from "./ChatMessage";
 import { ResetChat } from "./ResetChat";
 
+// Define the properties the Chat component will receive
 interface Props {
   messages: Message[];
   loading: boolean;
@@ -26,30 +28,42 @@ interface Props {
   onReset: () => void;
 }
 
+// Create the Chat component using the properties defined above
 export const Chat: FC<Props> = ({ messages, loading, onSend, onReset }) => {
+  // Render the Chat component's content
   return (
     <>
+      // Create a container for the ResetChat button
       <div className="flex flex-row justify-between items-center mb-4 sm:mb-8">
+        // Include the ResetChat component and pass the onReset function
         <ResetChat onReset={onReset} />
       </div>
 
+      // Create a container for the chat messages and input
       <div className="flex flex-col rounded-lg px-2 sm:p-4 sm:border border-neutral-300">
+        // Display each message in the messages array
         {messages.map((message, index) => (
+          // Create a container for each ChatMessage component
           <div
             key={index}
             className="my-1 sm:my-1.5"
           >
+            // Include the ChatMessage component and pass the message
             <ChatMessage message={message} />
           </div>
         ))}
 
+        // If the chat is loading, display the ChatLoader component
         {loading && (
+          // Create a container for the ChatLoader component
           <div className="my-1 sm:my-1.5">
             <ChatLoader />
           </div>
         )}
 
+        // Create a container for the ChatInput component
         <div className="mt-4 sm:mt-8 bottom-[56px] left-0 w-full">
+          // Include the ChatInput component and pass the onSend function
           <ChatInput onSend={onSend} />
         </div>
       </div>
