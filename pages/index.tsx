@@ -120,7 +120,7 @@ export default function Home() {
     <>
       {/* Add meta information for the page */}
       <Head>
-        <title>Chatbot UI</title>
+        <title>gptCodooor</title>
         <meta
           name="description"
           content="A simple chatbot starter kit for OpenAI's chat model using Next.js, TypeScript, and Tailwind CSS."
