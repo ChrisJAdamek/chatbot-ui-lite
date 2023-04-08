@@ -94,10 +94,11 @@ export const ChatInput: FC<Props> = ({ onSend }) => {
         onKeyDown={handleKeyDown}
       />
 
-      // Add a send button with an arrow-up icon
+      {/* Add a send button with an arrow-up icon */}
       <button onClick={() => handleSend()}>
         <IconArrowUp className="absolute right-2 bottom-3 h-8 w-8 hover:cursor-pointer rounded-full p-1 bg-blue-500 text-white hover:opacity-80" />
       </button>
     </div>
   );
 };
+
