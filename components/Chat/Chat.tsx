@@ -33,27 +33,27 @@ export const Chat: FC<Props> = ({ messages, loading, onSend, onReset }) => {
   // Render the Chat component's content
   return (
     <>
-      // Create a container for the ResetChat button
+      {/* Create a container for the ResetChat button */}
       <div className="flex flex-row justify-between items-center mb-4 sm:mb-8">
-        // Include the ResetChat component and pass the onReset function
+        {/* Include the ResetChat component and pass the onReset function */}
         <ResetChat onReset={onReset} />
       </div>
 
-      // Create a container for the chat messages and input
+      {/* Create a container for the chat messages and input */}
       <div className="flex flex-col rounded-lg px-2 sm:p-4 sm:border border-neutral-300">
-        // Display each message in the messages array
+        {/* Display each message in the messages array */}
         {messages.map((message, index) => (
           // Create a container for each ChatMessage component
           <div
             key={index}
             className="my-1 sm:my-1.5"
           >
-            // Include the ChatMessage component and pass the message
+            {/* Include the ChatMessage component and pass the message */}
             <ChatMessage message={message} />
           </div>
         ))}
 
-        // If the chat is loading, display the ChatLoader component
+        {/* If the chat is loading, display the ChatLoader component */}
         {loading && (
           // Create a container for the ChatLoader component
           <div className="my-1 sm:my-1.5">
@@ -61,12 +61,13 @@ export const Chat: FC<Props> = ({ messages, loading, onSend, onReset }) => {
           </div>
         )}
 
-        // Create a container for the ChatInput component
+        {/* Create a container for the ChatInput component */}
         <div className="mt-4 sm:mt-8 bottom-[56px] left-0 w-full">
-          // Include the ChatInput component and pass the onSend function
+          {/* Include the ChatInput component and pass the onSend function */}
           <ChatInput onSend={onSend} />
         </div>
       </div>
     </>
   );
 };
+
