@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps<{}>) {
   return (
     // Use the "main" HTML element and set the className to use the imported Inter font
     <main className={inter.className}>
-      // Render the passed "Component" and pass along the received "pageProps"
+      {/* Render the passed "Component" and pass along the received "pageProps" */}
       <Component {...pageProps} />
     </main>
   );
