@@ -1,3 +1,18 @@
+/*
+
+The provided code is a React functional component called ChatInput, which is used to handle user input in a chat application. It can fit within a chat app where users type and send messages to one another. The component includes features such as character limits, handling the Enter key to send messages, and automatically resizing the textarea to fit the content.
+
+Here's a brief overview of what the component does:
+
+The ChatInput component receives an onSend function as a prop. This function is called when a user sends a message.
+It maintains a state for the message content using the useState hook, and it sets up a reference to the textarea element using the useRef hook.
+It defines several event handlers, including handleChange for when the textarea content changes, handleSend for sending a message, and handleKeyDown for handling key presses in the textarea.
+The useEffect hook is used to automatically resize the textarea based on its content.
+The component renders a textarea element and a button for sending messages. The textarea element is styled to look appealing and includes a placeholder for user guidance.
+In a chat app, this component would typically be placed at the bottom of the chat window, allowing users to type their messages and send them by clicking the send button or pressing the Enter key. The parent component would be responsible for displaying the chat messages and handling the actual sending of messages to the server or other users.
+
+*/
+
 // Import necessary components and hooks from libraries
 import { Message } from "@/types";
 import { IconArrowUp } from "@tabler/icons-react";
